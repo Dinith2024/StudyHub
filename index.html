@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub – Tasks & Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+    <h1>📚 StudyHub</h1>
+
+    <!-- SWITCH BUTTON -->
+    <div class="switch-btns">
+      <button id="showTasksBtn" class="active">Tasks</button>
+      <button id="showNotesBtn">Notes</button>
+    </div>
+
+    <!-- TASK FRAME -->
+    <div id="taskFrame" class="frame active">
+      <h2>✅ Tasks</h2>
+      <div id="progressContainer">
+        <div id="progressBar"></div>
+      </div>
+      <p id="progressText">0% completed</p>
+
+      <form id="taskForm">
+        <input type="text" id="taskTitle" placeholder="Task title" required>
+        <input type="date" id="taskDue">
+        <input type="text" id="taskCategory" placeholder="Category (Study/Work)">
+        <button type="submit">Add Task</button>
+      </form>
+
+      <input type="text" id="taskSearch" placeholder="🔍 Search tasks..." onkeyup="filterTasks()">
+      <select id="categoryFilter" onchange="filterByCategory()">
+        <option value="all">All Categories</option>
+        <option value="Study">Study</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+      </select>
+
+      <ul id="taskList"></ul>
+    </div>
+
+    <!-- NOTES FRAME -->
+    <div id="noteFrame" class="frame">
+      <h2>📝 Notes</h2>
+      <form id="noteForm">
+        <input type="text" id="noteTitle" placeholder="Note title" required>
+        <textarea id="noteContent" placeholder="Write your note..." required></textarea>
+        <input type="text" id="noteTags" placeholder="Tags (comma separated)">
+        <button type="submit">Add Note</button>
+      </form>
+
+      <input type="text" id="noteSearch" placeholder="🔍 Search notes..." onkeyup="filterNotes()">
+
+      <ul id="noteList"></ul>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

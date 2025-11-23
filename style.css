@@ -1,0 +1,196 @@
+/* BASE */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: background 0.4s;
+}
+
+h1, h2 {
+  text-align: left;
+  margin: 10px 0;
+}
+
+/* SWITCH BUTTONS */
+.switch-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.switch-btns button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.switch-btns button.active {
+  background: #66a6ff;
+  color: white;
+}
+
+/* FRAMES */
+.frame {
+  display: none;
+}
+
+.frame.active {
+  display: block;
+}
+
+/* FORMS */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+}
+
+form input,
+form textarea,
+form button,
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  flex: 1;
+}
+
+form textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+form button {
+  background: #66a6ff;
+  color: white;
+  cursor: pointer;
+  flex: none;
+}
+
+/* LISTS */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255,255,255,0.5);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+li.overdue {
+  border-left: 5px solid red;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+li button:first-child {
+  background: #4caf50;
+  color: white;
+}
+
+li button:last-child {
+  background: #ff6b6b;
+  color: white;
+}
+
+/* THEME BUTTON */
+.theme-btn {
+  float: right;
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+  background: #0f0f0f !important;
+  color: white;
+}
+
+.dark .container {
+  background: rgba(255,255,255,0.06);
+}
+
+/* Text inputs, selects, textarea */
+.dark input,
+.dark textarea,
+.dark select {
+  background: rgba(255,255,255,0.1);
+  color: white !important;
+}
+
+/* Buttons */
+.dark button {
+  background: rgba(255,255,255,0.15);
+  color: white !important;
+}
+
+/* Dropdown fix */
+.dark select option {
+  background: #222;
+  color: white;
+}
+
+/* List items dark look */
+.dark li {
+  background: rgba(255,255,255,0.08);
+}
+
+/* PROGRESS BAR */
+#progressContainer {
+  width: 100%;
+  height: 15px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
