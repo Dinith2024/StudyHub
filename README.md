@@ -1,3 +1,7 @@
+This is the project structure without the database connected.
+-
+https://dinith2024.github.io/Memory-Supporter/
+
                📌 StudyHub – Smart Notes & To-Do Web App
 
 A simple and powerful productivity web application designed for students.
