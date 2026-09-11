@@ -31,5 +31,3 @@ Filter by title, category, or completion status
 📱 Responsive Design-
 Fully responsive,
 Works across desktop, tablet, and mobile
-
-Thanks.
